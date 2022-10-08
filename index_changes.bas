@@ -1,14 +1,13 @@
 Attribute VB_Name = "Module1"
 Public Sub RefreshChart()
 
-    Dim d_change As Date, d_analysis As Date
-    Dim strdc As String, strda As String
-    d_change = Range("change_date_selected").Value
-    d_analysis = Range("analysis_date_selected").Value
-    strdc = Year(d_change) & Format(Month(d_change), "00") & Format(Day(d_change), "00")
-    strda = Year(d_analysis) & Format(Month(d_analysis), "00") & Format(Day(d_analysis), "00")
+    Dim d_ann As Date, days_before As Integer
+    Dim strda As String
+    d_ann = Range("ann_date_selected").Value
+    days_before = Range("days_before_selected").Value
+    strda = Year(d_ann) & Format(Month(d_ann), "00") & Format(Day(d_ann), "00")
 
-    Call GetExecIndexChangeData(strdc, strda)
+    Call GetExecIndexChangeData(strda, days_before)
     DrawScatterPlot
 
 End Sub
@@ -35,7 +34,7 @@ Private Sub GetExecIndexChangeData(strdc As String, strda As String)
     cnxn.Open strConn
     With rs
         .ActiveConnection = cnxn
-        .Open "exec index_change_analysis" & " '" & strdc & "', '" & strda & "'"
+        .Open "exec index_change_analysis_2" & " '" & strda & "', '" & days_before & "'"
     End With
     ws.Range("A:F").ClearContents
     With rs
@@ -109,7 +108,7 @@ Private Sub DrawScatterPlot()
 End Sub
 Private Function ChartTitle() As String
 
-    ChartTitle = "Analysis of ASX200 index changes on " & Range("change_date_selected").Value
-    ChartTitle = ChartTitle & " Rankings by liquidity and market cap on " & Range("analysis_date_selected").Value
+    ChartTitle = "Analysis of ASX200 index changes announced on " & Range("ann_date_selected").Value
+    ChartTitle = ChartTitle & " Rankings by liquidity and market cap " & Range("days_before_selected").Value & " trading days earlier"
 
 End Function
