@@ -2,6 +2,9 @@
 This repo contains SQL and VBA code used in the investigation of (potential) trading strategies
 to make money off ASX200 index changes. The results of this analysis are in the document "index changes.pdf"
 
+We start by showing a chart of cumulative abnormal returns similar to an event study:
+
+
 All of the calculation were done using SQL in a SQL Server database
 
 All the scatterplots were created in Excel using VBA to<br>
