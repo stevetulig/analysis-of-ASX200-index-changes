@@ -10,6 +10,8 @@ The calculations to produce this chart are in event_study.sql.
 
 The next type of visualization is a series of scatterplots with categories. One such scatterplot is:
 
+![scat1a](https://user-images.githubusercontent.com/65940824/197311539-34b2a393-0a51-4741-aafc-5e343f9594f0.png)
+
  
 The X and Y variables are calculated before each announcement of a change in index membership. The series of scatterplots is used to determine whether patterns of these variables is useful in predicting the announced changes.
 
