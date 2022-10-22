@@ -1,12 +1,12 @@
 # analysis-of-ASX200-index-changes
-This repo contains SQL and VBA code used in the investigation of (potential) trading strategies
-to make money off ASX200 index changes. The results of this analysis are in the document "index changes.pdf"
+This repo contains SQL and VBA code used to produce visualizations for the investigation of (potential) trading strategies
+to make money off changes in the constituents of ASX200 index.
 
-We start by showing a chart of cumulative abnormal returns similar to an event study:
+Three types of visualization are produced. The first is an event-study time series plot of cumulative abnormal returns, assuming perfect foresight of the changes: 
 
 ![CAR1b](https://user-images.githubusercontent.com/65940824/197307348-b53b997a-8a84-46d1-9822-dad4377b3edf.png)
 
-
+The calculations to produce this chart are in event_study.sql.
 
 All of the calculation were done using SQL in a SQL Server database
 
