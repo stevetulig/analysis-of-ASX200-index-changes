@@ -4,7 +4,6 @@ to make money off ASX200 index changes. The results of this analysis are in the 
 
 We start by showing a chart of cumulative abnormal returns similar to an event study:
 
-![CAR1](https://user-images.githubusercontent.com/65940824/197306988-c099e685-2cf2-4b34-97f1-edb046f2ed30.jpg)
 
 
 All of the calculation were done using SQL in a SQL Server database
