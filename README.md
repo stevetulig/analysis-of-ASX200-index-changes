@@ -30,8 +30,54 @@ The computations to produce this chart are in **trading_strategy.sql**.
 **ASX200_constituents_pre_change**
 Column_name | Type | Nullable
 --- | --- | ---
-StockID |	smallint |	yes
-IndexDate	| datetime2 |	yes
+StockID |	int |	no
+IndexDate	| datetime2 |	no
+
+**Daily_prices**
+Column_name | Type | Nullable
+--- | --- | ---
+StockID |	int |	no
+PriceDate	| datetime2 |	no
+Open	float	yes
+High	float	yes
+Low	float	yes
+Close	float	yes
+AdjOpen	float	yes
+AdjHigh	float	yes
+AdjLow	float	yes
+AdjClose	float	yes
+Volume	int	yes
+MarketCap	float	yes
+Shares	float	yes
+
+**indexChangeData**
+Column_name | Type | Nullable
+--- | --- | ---
+Change	nvarchar	yes
+StockID |	int |	no
+EffDate	datetime2	yes
+AnnDate	datetime2	yes
+
+**SP200Data**
+Column_name | Type | Nullable
+--- | --- | ---
+PriceDate	| datetime2 |	no
+AccumIndex	float	yes
+DailyRet	float	yes
+
+**stockaccumindex**
+Column_name | Type | Nullable
+--- | --- | ---
+StockID |	int |	no
+PriceDate	| datetime2 |	no
+AccumIndex	decimal	yes
+
+**tradingdays**
+Column_name | Type | Nullable
+--- | --- | ---
+PriceDate	| datetime2 |	no
+EOM	smallint	yes
+DateOffset	int	yes
 
 [^1]: The X and Y variables are rankings based on the variables liquidity and average market capitalisation. Liquidity and average market capitalisation are calculated in accordance with Standard and Poors’ index methodology for every ASX stock 10, 20 and 30 trading days before each announcement.
 [^2]: It was determined that prediction of index removals, but not index additions, could feasibly be attempted.
