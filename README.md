@@ -29,4 +29,4 @@ Finally, the following graphic was produced of the cumulative returns of a short
 
 The computations to produce this chart are in **trading_strategy.sql**.
 
-[^1]The X and Y variables are rankings based on the variables liquidity and average market capitalisation. Liquidity and average market capitalisation are calculated in accordance with Standard and Poors’ index methodology for every ASX stock 10, 20 and 30 trading days before each announcement. 
+[^1]: The X and Y variables are rankings based on the variables liquidity and average market capitalisation. Liquidity and average market capitalisation are calculated in accordance with Standard and Poors’ index methodology for every ASX stock 10, 20 and 30 trading days before each announcement.
