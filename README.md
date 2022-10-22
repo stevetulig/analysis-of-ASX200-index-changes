@@ -38,32 +38,32 @@ Column_name | Type | Nullable
 --- | --- | ---
 StockID |	int |	no
 PriceDate	| datetime2 |	no
-Open	float	yes
-High	float	yes
-Low	float	yes
-Close	float	yes
-AdjOpen	float	yes
-AdjHigh	float	yes
-AdjLow	float	yes
-AdjClose	float	yes
-Volume	int	yes
-MarketCap	float	yes
-Shares	float	yes
+Open	| float	| yes
+High	| float	| yes
+Low	| float	| yes
+Close	| float	| yes
+AdjOpen	| float	| yes
+AdjHigh	| float	| yes
+AdjLow	| float	| yes
+AdjClose	| float	| yes
+Volume	| int	| yes
+MarketCap	| float	| yes
+Shares	| float	| yes
 
 **indexChangeData**
 Column_name | Type | Nullable
 --- | --- | ---
 Change	nvarchar	yes
 StockID |	int |	no
-EffDate	datetime2	yes
-AnnDate	datetime2	yes
+EffDate	| datetime2	| yes
+AnnDate	| datetime2	| yes
 
 **SP200Data**
 Column_name | Type | Nullable
 --- | --- | ---
 PriceDate	| datetime2 |	no
-AccumIndex	float	yes
-DailyRet	float	yes
+AccumIndex	| float	| yes
+DailyRet	| float	| yes
 
 **stockaccumindex**
 Column_name | Type | Nullable
@@ -76,8 +76,8 @@ AccumIndex	decimal	yes
 Column_name | Type | Nullable
 --- | --- | ---
 PriceDate	| datetime2 |	no
-EOM	smallint	yes
-DateOffset	int	yes
+EOM	| smallint	| yes
+DateOffset	| int	| yes
 
 [^1]: The X and Y variables are rankings based on the variables liquidity and average market capitalisation. Liquidity and average market capitalisation are calculated in accordance with Standard and Poors’ index methodology for every ASX stock 10, 20 and 30 trading days before each announcement.
 [^2]: It was determined that prediction of index removals, but not index additions, could feasibly be attempted.
