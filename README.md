@@ -24,7 +24,8 @@ The stored procedure is called from within VBA in Excel. The relevant code is in
 It was determined that prediction of index removals, but not index additions, could feasibly be attempted.
 
 Finally, the following graphic was produced of the cumulative returns of a short-selling trading strategy based on selling the bottom ten stocks in the ASX200 index:
-![CAR2a](https://user-images.githubusercontent.com/65940824/197314620-2c1f52a1-3c98-44f2-be6a-18cf76289992.png)
+
+![CAR2b](https://user-images.githubusercontent.com/65940824/197314706-44bbab05-62c3-4947-8ba3-122a2ca365c3.png)
 
 All of the calculation were done using SQL in a SQL Server database
 
