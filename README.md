@@ -17,10 +17,14 @@ The X and Y variables are calculated before each announcement of a change in ind
 
 The X and Y variables are rankings based on the variables liquidity and average market capitalisation. Liquidity and average market capitalisation are calculated in accordance with Standard and Poors’ index methodology for every ASX stock 10, 20 and 30 trading days before each announcement. These calculations are in **create_index_change_factors.sql**.
 
-The stored procedure index_change_analysis returns a set of records corresponding to a given announcement date (of which there are four every year) and a given number of trading days prior to the announcement. Each record has fields necessary to produce the scatterplot in Excel.
+The stored procedure **index_change_analysis** returns a set of records corresponding to a given announcement date (of which there are four every year) and a given number of trading days prior to the announcement. Each record has fields necessary to produce the scatterplot in Excel.
 
 The stored procedure is called from within VBA in Excel. The relevant code is in **index_changes.bas**, which imports the result into an ADODB recordset, copies the data into Excel, and produces the scatterplot.
 
+It was determined that prediction of index removals, but not index additions, could feasibly be attempted.
+
+Finally, the following graphic was produced of the cumulative returns of a short-selling trading strategy based on selling the bottom ten stocks in the ASX200 index:
+![CAR2a](https://user-images.githubusercontent.com/65940824/197314620-2c1f52a1-3c98-44f2-be6a-18cf76289992.png)
 
 All of the calculation were done using SQL in a SQL Server database
 
